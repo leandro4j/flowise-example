@@ -1,5 +1,57 @@
 <html>
+    <head>
+        <style>
+            body {
+                background-color: rgb(126, 88, 231);
+                background-image: url(bg-bode.png);
+                margin: 0px;
+                background-size: 60%;
+                background-repeat: no-repeat;
+                background-position: left bottom;
+                background-position-x: -180px;
+            }
+
+            .title {
+                background-image: url(snk-gpt.png);
+                background-size: 100% auto;
+                background-repeat: no-repeat;
+                width: 700px;
+                height: 70px;
+                position: absolute;
+                top: 50px;
+                left: 110px;
+            }
+
+            .point {
+                background-image: url(point.png);
+                background-size: 100% auto;
+                background-repeat: no-repeat;
+                width: 200px;
+                height: 200px;
+                margin-bottom: 0px;
+                margin-right: 0px;
+                position: absolute;
+                bottom: 20px;
+                right: 50px;
+            }
+        </style>
+    </head>
     <body>
-       
+        <div class="title"></div>
+        <div class="point"></div>
+
+        <script type="module">
+            import Chatbot from "https://cdn.jsdelivr.net/npm/flowise-embed/dist/web.js"
+            Chatbot.init({
+                chatflowid: "80ccded4-3dea-4c76-80c1-748e5b80738d",
+                apiHost: "https://flowise-example-dp9i.onrender.com",
+                theme: {
+                    chatWindow: {
+                        welcomeMessage: "Olá! Como posso ajudar? Ex. Pergunte-me como fazer uma find de entidade com o Jape."
+                    }
+                }
+            })
+        </script>
+
     </body>
 </html>
